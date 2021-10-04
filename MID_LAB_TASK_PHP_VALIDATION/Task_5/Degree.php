@@ -11,6 +11,7 @@
             <input type="checkbox" name="degreeSsc" value="SSC"> SSC
             <input type="checkbox" name="degreeHsc" value="HSC"> HSC
             <input type="checkbox" name="degreeBsc" value="BSc"> BSc
+            <input type="checkbox" name="degreeBsc" value="MSc"> MSc
            
         </fieldset>
         <br>
@@ -22,10 +23,11 @@
                 $selectedCOunt += isset($_REQUEST['degreeSsc'])?1:0;
                 $selectedCOunt += isset($_REQUEST['degreeHsc'])?1:0;
                 $selectedCOunt += isset($_REQUEST['degreeBsc'])?1:0;
+                $selectedCOunt += isset($_REQUEST['degreeMSc'])?1:0;
                 
                 
                 if($selectedCOunt<2){
-                    echo 'At least one must be selected';
+                    echo 'At least  two must be selected';
                     return;
                 }
                 echo 'Submitted';
