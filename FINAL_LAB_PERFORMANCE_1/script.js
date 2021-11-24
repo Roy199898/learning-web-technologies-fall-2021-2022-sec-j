@@ -11,50 +11,52 @@ function btn(key) {
     if (!resultElement.innerHTML.includes(".")) {
       resultElement.innerHTML += ".";
     } else {
-      
+      //Check if dot exists on second num
     }
   } else {
     if (key == "+" || key == "-" || key == "*" || key == "/" || key == "=") {
       switch (operatorElement.innerHTML) {
         case "+":
           resultPrevElement.innerHTML =
-             Number(resultPrevElement.innerHTML) +
-             Number(resultElement.innerHTML);
+            Number(resultPrevElement.innerHTML) +
+            Number(resultElement.innerHTML);
           resultElement.innerHTML = 0;
           operatorElement.innerHTML = key;
           hideElementsForEqual(key);
           break;
-        case "-":
-          resultPrevElement.innerHTML =
-             Number(resultPrevElement.innerHTML) -
-             Number(resultElement.innerHTML);
+         case "-":
+           resultPrevElement.innerHTML =
+            Number(resultPrevElement.innerHTML) -
+            Number(resultElement.innerHTML);
           resultElement.innerHTML = 0;
           operatorElement.innerHTML = key;
           hideElementsForEqual(key);
           break;
-        case "*":
-          resultPrevElement.innerHTML =
-             Number(resultPrevElement.innerHTML) *
-             Number(resultElement.innerHTML);
+         case "*":
+           resultPrevElement.innerHTML =
+            Number(resultPrevElement.innerHTML) *
+            Number(resultElement.innerHTML);
           resultElement.innerHTML = 0;
           operatorElement.innerHTML = key;
           hideElementsForEqual(key);
           break;
-        case "/":
-          resultPrevElement.innerHTML =
-             Number(resultPrevElement.innerHTML) /
-             Number(resultElement.innerHTML);
+         case "/":
+           resultPrevElement.innerHTML =
+            Number(resultPrevElement.innerHTML) /
+            Number(resultElement.innerHTML);
           resultElement.innerHTML = 0;
           operatorElement.innerHTML = key;
           hideElementsForEqual(key);
           break;
-        case "":
-            resultPrevElement.innerHTML = resultElement.innerHTML;
-            operatorElement.innerHTML = key;
+         case "":
+           resultPrevElement.innerHTML = resultElement.innerHTML;
+           operatorElement.innerHTML = key;
            resultElement.innerHTML = 0;
           break;
         case "=":
-          resultElement.innerHTML = resultPrevElement.innerHTML;
+           resultPrevElement.innerHTML = resultElement.innerHTML;
+           operatorElement.innerHTML = key;
+           resultElement.innerHTML = "0";
           break;
       }
     } else {
@@ -64,16 +66,16 @@ function btn(key) {
            operatorElement.innerHTML = "=";
           break;
         case "C":
-           resultElement.innerHTML = "0";
-           resultPrevElement.innerHTML = "";
-           operatorElement.innerHTML = "";
+          resultElement.innerHTML = "0";
+          resultPrevElement.innerHTML = "";
+          operatorElement.innerHTML = "";
           break;
         case "DEL":
           resultElement.innerHTML = resultElement.innerHTML.slice(0, -1);
           break;
         case "+/-":
           if (resultElement.innerHTML.charAt(0) == "-") {
-             resultElement.innerHTML = resultElement.innerHTML.substr(1);
+            resultElement.innerHTML = resultElement.innerHTML.substr(1);
           } else {
             resultElement.innerHTML = "-" + resultElement.innerHTML;
           }
@@ -85,8 +87,8 @@ function btn(key) {
 
 function hideElementsForEqual(key) {
   if (key == "=") {
-    resultElement.innerHTML = resultPrevElement.innerHTML;
-    resultPrevElement.innerHTML = "";
-    operatorElement.innerHTML = "=";
+     resultElement.innerHTML = resultPrevElement.innerHTML;
+     resultPrevElement.innerHTML = "";
+     operatorElement.innerHTML = "=";
   }
 }

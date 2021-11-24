@@ -18,46 +18,45 @@ function btn(key) {
       switch (operatorElement.innerHTML) {
         case "+":
           getResult(
-             Number(resultPrevElement.innerHTML),
-             Number(resultElement.innerHTML),
+            Number(resultPrevElement.innerHTML),
+            Number(resultElement.innerHTML),
             "add",
             key
           );
           break;
         case "-":
           getResult(
-             Number(resultPrevElement.innerHTML),
-             Number(resultElement.innerHTML),
+            Number(resultPrevElement.innerHTML),
+            Number(resultElement.innerHTML),
             "sub",
             key
           );
           break;
         case "*":
           getResult(
-             Number(resultPrevElement.innerHTML),
-             Number(resultElement.innerHTML),
+            Number(resultPrevElement.innerHTML),
+            Number(resultElement.innerHTML),
             "mul",
             key
           );
           break;
         case "/":
           getResult(
-             Number(resultPrevElement.innerHTML),
-             Number(resultElement.innerHTML),
+            Number(resultPrevElement.innerHTML),
+            Number(resultElement.innerHTML),
             "div",
             key
           );
           break;
         case "":
-           resultPrevElement.innerHTML = resultElement.innerHTML;
-           operatorElement.innerHTML = key;
-           resultElement.innerHTML = 0;
+          resultPrevElement.innerHTML = resultElement.innerHTML;
+          operatorElement.innerHTML = key;
+          resultElement.innerHTML = 0;
           break;
         case "=":
-          //resultElement.innerHTML = resultPrevElement.innerHTML;
-           resultPrevElement.innerHTML = resultElement.innerHTML;
-           operatorElement.innerHTML = key;
-           resultElement.innerHTML = "0";
+          resultPrevElement.innerHTML = resultElement.innerHTML;
+          operatorElement.innerHTML = key;
+          resultElement.innerHTML = "0";
           break;
       }
     } else {
@@ -78,7 +77,7 @@ function btn(key) {
           if (resultElement.innerHTML.charAt(0) == "-") {
             resultElement.innerHTML = resultElement.innerHTML.substr(1);
           } else {
-              resultElement.innerHTML = "-" + resultElement.innerHTML;
+            resultElement.innerHTML = "-" + resultElement.innerHTML;
           }
           break;
       }
@@ -88,9 +87,9 @@ function btn(key) {
 
 function hideElementsForEqual(key) {
   if (key == "=") {
-      resultElement.innerHTML = resultPrevElement.innerHTML;
-      resultPrevElement.innerHTML = "";
-      operatorElement.innerHTML = "=";
+    resultElement.innerHTML = resultPrevElement.innerHTML;
+    resultPrevElement.innerHTML = "";
+    operatorElement.innerHTML = "=";
   }
 }
 
