@@ -11,7 +11,7 @@ function btn(key) {
     if (!resultElement.innerHTML.includes(".")) {
       resultElement.innerHTML += ".";
     } else {
-      //Check if dot exists on second num
+      
     }
   } else {
     if (key == "+" || key == "-" || key == "*" || key == "/" || key == "=") {
@@ -49,8 +49,8 @@ function btn(key) {
           hideElementsForEqual(key);
           break;
         case "":
-           resultPrevElement.innerHTML = resultElement.innerHTML;
-           operatorElement.innerHTML = key;
+            resultPrevElement.innerHTML = resultElement.innerHTML;
+            operatorElement.innerHTML = key;
            resultElement.innerHTML = 0;
           break;
         case "=":
